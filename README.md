@@ -12,5 +12,5 @@ SMTP_USER = email de origem
 SMTP_PASS = chave do email de origem
 DEST_EMAIL = email de destino 
 ## Endpoints
-`/contato`: Endpoint principal que envia o email com as informações no POST
-`/health`: Endpoint para checar disponibilidade da API sem precisar disparar emails de teste
+- `/contato`: Endpoint principal que envia o email com as informações no POST
+- `/health`: Endpoint para checar disponibilidade da API sem precisar disparar emails de teste
