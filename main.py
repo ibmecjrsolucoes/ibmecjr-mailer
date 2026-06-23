@@ -46,16 +46,19 @@ def enviar_email(form: ContatoForm):
     msg["Reply-To"] = form.email
 
     corpo = f"""
-    Nome: {form.nome}
-    Email: {form.email}
-    Empresa: {form.empresa}
-    Cargo: {form.cargo}
-    Funcionários: {form.funcionarios}
-    Segmento: {form.segmento}
-    Serviços: {", ".join(form.servico)}
-    Desafio: {form.desafioPrincipal}
-    Prazo: {form.prazoSolucao}
-    Resultado esperado: {form.resultadoEsperado}
+    🎓 *Nova mensagem pelo site — IBMEC Jr
+    👤 Nome: {form.nome}
+    📧 Email: {form.email}
+    🏢 Empresa: {form.empresa}
+    💼 Cargo: {form.cargo}
+    👥 Funcionários: {form.funcionarios}
+    🏷️ Segmento: {form.segmento}
+    🧩 Serviços: {", ".join(form.servico)}
+    ⚠️ Desafio: {form.desafioPrincipal}
+    ⏱️ Prazo: {form.prazoSolucao}
+    🎯 Resultado esperado: {form.resultadoEsperado}
+    ---
+    _Enviado via ibmecjr.com.br_
     """
 
     msg.attach(MIMEText(corpo, "plain"))
