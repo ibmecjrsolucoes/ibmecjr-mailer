@@ -1,6 +1,6 @@
 # ibmecjr-mailer
 ## Descrição
-API, POST only, para enviar email com dados do formulário para o email do comercial, utilizando o smtplib 
+API, para enviar email com dados do formulário para o email do comercial, utilizando o smtplib 
 ## Tecnologias
 FastAPI, pydantic, uvicorn, python-dotenv
 ## Como rodar localmente 
