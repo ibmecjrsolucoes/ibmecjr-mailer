@@ -15,7 +15,7 @@ app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins = ["http://127.0.0.1:8000"],
+    allow_origins = ["http://localhost:5173"],
     allow_methods = ["POST", "OPTIONS"],
     allow_headers = ["Content-Type"],
 )
@@ -75,3 +75,7 @@ def enviar_email(form: ContatoForm):
 def receber_email(form: ContatoForm):
     enviar_email(form)
     return {"message":"Formulário enviado com sucesso!"}
+
+@app.get("/health")
+def health():
+    return {"status": "ok"}
